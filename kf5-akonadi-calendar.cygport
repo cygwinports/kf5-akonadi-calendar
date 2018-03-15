@@ -1,0 +1,26 @@
+inherit kf5
+
+NAME="kf5-akonadi-calendar"
+VERSION=17.12.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Akonadi Calendar library"
+DESCRIPTION="Akonadi Calendar is a library that effectively bridges the type-
+agnostic API of the Akonadi client libraries and the domain-specific KCalCore
+library. It provides jobs, models and other helpers to make working with events
+and calendars through Akonadi easier."
+
+PKG_NAMES="libKF5AkonadiCalendar5 libKF5AkonadiCalendar-devel"
+libKF5AkonadiCalendar5_CONTENTS="
+	usr/bin/cygKF5AkonadiCalendar-5.dll
+	usr/share/doc/${NAME}
+	usr/share/locale/*/LC_MESSAGES/libakonadi-calendar5.mo
+"
+libKF5AkonadiCalendar_devel_REQUIRES="libKF5Akonadi-devel libKF5CalendarCore-devel libKF5WidgetsAddons-devel libKF5I18n-devel"
+libKF5AkonadiCalendar_devel_CONTENTS="
+	usr/include/KF5/[Aa]konadi/[Cc]alendar/
+	usr/include/KF5/akonadi-calendar_version.h
+	usr/lib/cmake/KF5AkonadiCalendar/
+	usr/lib/libKF5AkonadiCalendar.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_AkonadiCalendar.pri
+"
